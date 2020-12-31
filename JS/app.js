@@ -4,7 +4,12 @@ window.addEventListener("load", function () {
     var spanMessage = document.querySelector(".load");
     fetch('https://dog.ceo/api/breeds/image/random')
         .then(data => data.json())
-        .then(photoRandom => { generatorImg(photoRandom); span(); })
+        .then(photoRandom => {
+            setTimeout(() => {
+                span();
+                generatorImg(photoRandom);
+            }, 2000)
+        })
     let generatorImg = gntImg => {
         let img = document.createElement("img");
         img.src = gntImg.message;
