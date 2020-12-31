@@ -2,9 +2,14 @@ window.addEventListener("load", function () {
     var imgRandom = document.querySelector("#div-Img");
     var btnRandom = document.querySelector("#btn-Random");
     var spanMessage = document.querySelector(".load");
-    fetch('https://dog.ceo/api/breeds/image/random')
+    fetch('https://dog.ceo/api/breeds/image/randommmm')
         .then(data => data.json())
-        .then(photoRandom => { generatorImg(photoRandom); span(); })
+        .then(photoRandom => {
+            setTimeout(() => {
+                span();
+                generatorImg(photoRandom);
+            }, 2000)
+        })
     let generatorImg = gntImg => {
         let img = document.createElement("img");
         img.src = gntImg.message;
