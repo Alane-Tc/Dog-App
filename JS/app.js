@@ -2,7 +2,7 @@ window.addEventListener("load", function () {
     var imgRandom = document.querySelector("#div-Img");
     var btnRandom = document.querySelector("#btn-Random");
     var spanMessage = document.querySelector(".load");
-    fetch('https://dog.ceo/api/breeds/image/randommmm')
+    fetch('https://dog.ceo/api/breeds/image/random')
         .then(data => data.json())
         .then(photoRandom => {
             setTimeout(() => {
